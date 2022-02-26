@@ -1,38 +1,106 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
 .App {
-  text-align: center;
+  background-color: rgba(250, 230, 200, 0.427);
+  height: 100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  height: 50px;
+  display: flex;
+  padding: 15px 36px;
+  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.221);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav--logo {
+  max-width: 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.hero {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.hero--photo {
+  max-width: 400px;
+  align-self: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hero--header {
+  margin-bottom: 16px;
+}
+
+.hero--text {
+  margin-top: 0;
+}
+.card,
+.card-text--section {
+  display: flex;
+  flex-direction: column;
+}
+.card-text--section {
+  margin-top: 20px;
+  padding-left: 100px;
+  align-items: flex-start;
+}
+
+.card-img-figure {
+  position: relative;
+}
+
+.card-img {
+  width: 80%;
+}
+.card-tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 25px;
+  background-color: aliceblue;
+  font-size: 1.5em;
+}
+.card-tag--p {
+  margin: 0;
+  padding: 5px 15px;
+}
+
+.card-rating--section {
+  display: flex;
+  flex-direction: row;
+  justify-items: left;
+}
+
+.card-img-figure {
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-rating-symbol,
+.card-rating-ratings,
+.card-rating-numberOfRatings,
+.card-rating-place,
+.card-rating--section {
+  margin: 0px;
+  padding: 5px;
+}
+
+.infoText,
+.price--section,
+.price,
+.text-info--section {
+  margin: 3px 0px;
+  padding: 0px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+.aperson--section {
+  font-weight: lighter;
 }
