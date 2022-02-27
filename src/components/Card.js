@@ -1,12 +1,19 @@
-export default function Card() {
+export default function Card(props) {
+  let cardinfo = props.cardinfo;
+  console.log(cardinfo);
+  let image = cardinfo.img;
+  let rating = cardinfo.rating;
+  let reviewCount = cardinfo.reviewCount;
+  let country = cardinfo.country;
+  let title = cardinfo.title;
+  let price = cardinfo.price;
+
   return (
     <article className="card">
       <section className="card-image--section">
         <figure className="card-img-figure">
-          <img className="card-img" src="/images/image12.png" alt="image12" />
-          <section className="card-tag">
-            <p className="card-tag--p">Sold out!</p>
-          </section>
+          <img className="card-img" src={`/images/${image}`} alt="image12" />
+          <section className="card-tag">TAG</section>
         </figure>
       </section>
       <section className="card-text--section">
@@ -18,16 +25,18 @@ export default function Card() {
               alt="ratingstar"
             />
           </section>
-          <section className="card-rating-ratings">5.0</section>
-          <section className="card-rating-numberOfRatings">(6)</section>
-          <section className="card-rating-place">- USA </section>
+          <section className="card-rating-ratings">{rating}</section>
+          <section className="card-rating-numberOfRatings">
+            {reviewCount}
+          </section>
+          <section className="card-rating-place">- {country} </section>
         </section>
         <section className="text-info--section">
-          <p className="infoText">Life lessons with Katie zaferes</p>
+          <p className="infoText">{title}</p>
         </section>
         <section className="price--section">
           <p className="price">
-            from $100
+            from ${price}
             <span className="aperson--section"> / person</span>
           </p>
         </section>
