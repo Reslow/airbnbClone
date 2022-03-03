@@ -1,18 +1,16 @@
-export default function Card(props) {
-  let cardinfo = props.cardinfo;
-  console.log(cardinfo);
-  let image = cardinfo.img;
-  let rating = cardinfo.rating;
-  let reviewCount = cardinfo.reviewCount;
-  let country = cardinfo.country;
-  let title = cardinfo.title;
-  let price = cardinfo.price;
-
+export default function Card({
+  title,
+  location,
+  img,
+  rating,
+  reviewCount,
+  price,
+}) {
   return (
     <article className="card">
       <section className="card-image--section">
         <figure className="card-img-figure">
-          <img className="card-img" src={`/images/${image}`} alt="image12" />
+          <img className="card-img" src={`/images/${img}`} alt="image12" />
           <section className="card-tag">TAG</section>
         </figure>
       </section>
@@ -29,7 +27,7 @@ export default function Card(props) {
           <section className="card-rating-numberOfRatings">
             {reviewCount}
           </section>
-          <section className="card-rating-place">- {country} </section>
+          <section className="card-rating-place">- {location} </section>
         </section>
         <section className="text-info--section">
           <p className="infoText">{title}</p>
