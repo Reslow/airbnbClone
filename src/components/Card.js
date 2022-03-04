@@ -1,17 +1,25 @@
-export default function Card({
-  title,
-  location,
-  img,
-  rating,
-  reviewCount,
-  price,
-}) {
+export default function Card({ card }) {
+  console.log(card);
+  let title = card.title;
+  let location = card.location;
+  let img = card.coverImg;
+  let rating = card.stats.rating;
+  let reviewCount = card.stats.reviewCount;
+  let price = card.price;
+  let openSpots = card.openSpots;
+
+  let badgeText;
+  if (openSpots === 0) {
+    badgeText = "SOLD OUT!";
+  } else if (location === "Online") {
+    badgeText = "ONLINE";
+  }
   return (
     <article className="card">
       <section className="card-image--section">
         <figure className="card-img-figure">
+          {badgeText && <div className="card--badge">{badgeText}</div>}
           <img className="card-img" src={`/images/${img}`} alt="image12" />
-          <section className="card-tag">TAG</section>
         </figure>
       </section>
       <section className="card-text--section">
@@ -25,9 +33,9 @@ export default function Card({
           </section>
           <section className="card-rating-ratings">{rating}</section>
           <section className="card-rating-numberOfRatings">
-            {reviewCount}
+            ({reviewCount})
           </section>
-          <section className="card-rating-place">- {location} </section>
+          <section className="card-rating-place">{location} </section>
         </section>
         <section className="text-info--section">
           <p className="infoText">{title}</p>

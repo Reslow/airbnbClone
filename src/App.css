@@ -1,22 +1,26 @@
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-}
-
-.App {
-  background-color: rgba(250, 230, 200, 0.427);
-  height: 100vh;
+  padding: 20px;
 }
 
 nav {
-  height: 50px;
+  height: 70px;
   display: flex;
-  padding: 15px 36px;
-  box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.221);
+  padding: 20px 36px;
+  box-shadow: 0px 2.98256px 7.4564px rgba(0, 0, 0, 0.1);
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.gray {
+  color: #918e9b;
 }
 
 .nav--logo {
-  max-width: 80px;
+  max-width: 100px;
 }
 
 .hero {
@@ -36,69 +40,63 @@ nav {
 .hero--text {
   margin-top: 0;
 }
-.card,
-.card-text--section {
+
+.cards-list {
   display: flex;
-  flex-direction: column;
-}
-.card-text--section {
-  padding-left: 50px;
-  align-items: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
 }
 
-.card-img-figure {
+.card {
+  width: 200px;
+  font-size: 12px;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
   position: relative;
 }
 
-.card-img {
-  width: 80%;
-  border-radius: 20px;
-}
-.card-tag {
-  position: absolute;
-  top: 0;
-  left: 0;
+.card--image {
+  width: 100%;
+  border-radius: 9px;
+  margin-bottom: 9px;
   padding: 0;
-  margin: 25px;
-  background-color: aliceblue;
-  font-size: 1em;
-}
-.card-tag--p {
   margin: 0;
-  padding: 5px 15px;
+}
+.card-img-figure {
+  margin: 0;
+}
+
+/* ADD */
+.card--title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card--stats {
+  display: flex;
+  align-items: center;
+}
+
+.card--star {
+  height: 14px;
+}
+
+.card--price {
+  margin-top: auto;
 }
 
 .card-rating--section {
   display: flex;
   flex-direction: row;
-  justify-items: left;
 }
 
-.card-img-figure {
-  max-width: 50%;
-}
-
-.card-rating-symbol,
-.card-rating-ratings,
-.card-rating-numberOfRatings,
-.card-rating-place,
-.card-rating--section {
-  margin: 0px;
-  padding: 5px;
-}
-
-.infoText,
-.price--section,
-.price,
-.text-info--section {
-  margin: 3px 0px;
-  padding: 0px;
-}
-
-.price {
+.card--badge {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  background-color: white;
+  padding: 5px 7px;
+  border-radius: 2px;
   font-weight: bold;
-}
-
-.aperson--section {
-  font-weight: lighter;
 }

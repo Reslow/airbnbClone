@@ -7,23 +7,14 @@ import data from "./data";
 function App() {
   let cards = data.map((card) => {
     console.log(card.title);
-    return (
-      <Card
-        img={card.coverImg}
-        rating={card.stats.rating}
-        reviewCount={card.stats.reviewCount}
-        location={card.location}
-        title={card.title}
-        price={card.price}
-      />
-    );
+    return <Card key={card.id} card={card} />;
   });
 
   return (
     <div className="App">
       <Navbar />
       <Hero />
-      {cards}
+      <section className="cards-list">{cards}</section>
     </div>
   );
 }
